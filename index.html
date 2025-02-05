@@ -9,18 +9,18 @@
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;  /* Utilise 100% de la hauteur de la fenêtre */
-            width: 100%;   /* Utilise 100% de la largeur de la fenêtre */
-            overflow: hidden; /* Pour empêcher le défilement */
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
             display: flex;
-            justify-content: center; /* Centrer l'image horizontalement */
-            align-items: center; /* Centrer l'image verticalement */
+            justify-content: center;
+            align-items: center;
         }
 
         .full-screen-gif {
             width: 100%;
             height: 100%;
-            object-fit: cover;  /* Assure que le GIF remplit l'écran en gardant son ratio */
+            object-fit: cover;
             max-width: 100%;
             max-height: 100%;
         }
@@ -28,13 +28,13 @@
         /* Media query pour les écrans en mode paysage */
         @media (orientation: landscape) {
             body, html {
-                height: 90vh;  /* Utilise toute la hauteur de la fenêtre pour l'écran en paysage */
+                height: 100vh;
             }
 
             .full-screen-gif {
-                width: 100vw;  /* Utilise toute la largeur de l'écran */
-                height: 100vh; /* Utilise toute la hauteur de l'écran */
-                object-fit: cover;  /* Remplir l'écran sans déformation */
+                width: 100vw;
+                height: 100vh;
+                object-fit: cover;
             }
         }
     </style>
@@ -42,5 +42,19 @@
 <body>
     <!-- Insérer l'URL du GIF Giphy -->
     <img class="full-screen-gif" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWk2cXIyZHppMmRncGkyb2NyM3Zxc2tmczdua3BxbHgxODIxbWswOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0XVxFFmXwKv7v8PSIB/giphy.gif" alt="Full-Screen GIF">
-</body>
-</html>
+
+    <script>
+        // Fonction pour ajuster la taille du GIF en fonction de la taille réelle de la fenêtre
+        function adjustGifSize() {
+            if (window.innerHeight < window.innerWidth) {
+                // Mode paysage
+                document.body.style.height = window.innerHeight + 'px';
+            } else {
+                // Mode portrait
+                document.body.style.height = '100%';
+            }
+        }
+
+        // Exécuter la fonction au chargement de la page et lors du redimensionnement
+        window.addEventListener('load', adjustGifSize);
+        window.addEventListener('resize', adjustGifSi
