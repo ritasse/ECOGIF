@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Screen GIF</title>
+    <style>
+        /* CSS pour rendre le GIF en plein écran */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Pour empêcher le défilement */
+        }
+        
+        .full-screen-gif {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Assure que le GIF remplit tout l'écran */
+        }
+    </style>
+</head>
+<body>
+    <!-- Insérer l'URL du GIF Giphy -->
+    <img class="full-screen-gif" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWk2cXIyZHppMmRncGkyb2NyM3Zxc2tmczdua3BxbHgxODIxbWswOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0XVxFFmXwKv7v8PSIB/giphy.gif" alt="Full-Screen GIF">
+</body>
+</html>
