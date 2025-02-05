@@ -41,4 +41,23 @@
 </head>
 <body>
     <!-- Insérer l'URL du GIF Giphy -->
-    <img class="full-screen-gif" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWk2cXIyZHppMmRncGkyb2NyM3Zxc2tmczdua3BxbHgxODIxbWswOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0XVxFFmXwKv7v8PSIB/giphy.gif
+    <img class="full-screen-gif" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWk2cXIyZHppMmRncGkyb2NyM3Zxc2tmczdua3BxbHgxODIxbWswOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0XVxFFmXwKv7v8PSIB/giphy.gif" alt="Full-Screen GIF">
+
+    <script>
+        // Fonction pour ajuster la taille du GIF en fonction de la taille réelle de la fenêtre
+        function adjustGifSize() {
+            if (window.innerHeight < window.innerWidth) {
+                // Mode paysage
+                document.body.style.height = window.innerHeight + 'px';
+            } else {
+                // Mode portrait
+                document.body.style.height = '100%';
+            }
+        }
+
+        // Exécuter la fonction au chargement de la page et lors du redimensionnement
+        window.addEventListener('load', adjustGifSize);
+        window.addEventListener('resize', adjustGifSize);
+    </script>
+</body>
+</html>
