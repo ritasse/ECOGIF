@@ -25,6 +25,6 @@
 </head>
 <body>
     <!-- Insérer l'URL du GIF Giphy -->
-    <img class="full-screen-gif" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWk2cXIyZHppMmRncGkyb2NyM3Zxc2tmczdua3BxbHgxODIxbWswOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0XVxFFmXwKv7v8PSIB/giphy.gif" alt="Full-Screen GIF">
+    <img class="full-screen-gif" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWk2cXIyZHppMmRncGkyb2NyM3Zxc2tmczdua3BxbHgxODIxbWswOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0XVxFFmXwKv7v8PSIB/giphy.gif">
 </body>
 </html>
